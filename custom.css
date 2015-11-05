@@ -8,12 +8,12 @@
     color: #fff;
 }
 #background {
-    background: url(images/stripes.png) 50% 0 fixed;
+    background: url(images/bregenz.jpg) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 200px 0;
+    padding: 250px 0;
 }
 #did-do {
     background: 50% 0 fixed;
@@ -24,7 +24,7 @@
     padding: 50px 0px 50px 0px;
 }
 #background2 {
-    background: url(images/stripes.png) 50% 0 fixed;
+    background: url(images/bregenz.jpg) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
@@ -46,22 +46,6 @@
     width: 100%;
     position: relative;
     padding: 50px 0;
-}
-#background3 {
-    background: url(images/stripes.png) 50% 0 fixed;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 200px 0;
-}
-#background4 {
-    background: url(images/stripes.png) 50% 0 fixed;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 200px 0;
 }
 #contact {
     background: rgba(2, 41, 58,1) 50% 0 fixed;
