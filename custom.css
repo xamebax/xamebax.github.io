@@ -11,42 +11,52 @@
 
 body {
   font-family: 'bodonitownregular', serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 a {
-  color: rgba(119,145,156,1);
+  color: rgba(119, 145, 156, 1);
 }
 
 a:hover {
-  color: rgba(74,114,132,1);
+  color: rgba(74, 114, 132, 1);
   text-decoration: none;
 }
+
+.row {
+  padding: 0px 20px;
+}
+
+#did-do > a {
+  color: rgba(128, 130, 16, 1);
+  text-decoration: none;
+}
+
 #header {
-    background: rgba(2, 41, 58,1) 50% 0 fixed;
+    background: url('images/header.png') rgba(2, 41, 58,1) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 50px 0 50px 0px;
+    padding: 50px 0px;
     color: #fff;
 }
 
 #background {
     background: url(images/bregenz.jpg) 50% 0 fixed;
     height: auto;
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
     position: relative;
-    padding: 250px 0;
+    padding: 260px 0;
 }
 #did-do {
     background: 50% 0 fixed;
@@ -56,22 +66,17 @@ a:hover {
     position: relative;
     padding: 50px 0px 50px 0px;
 }
-#background2 {
-    background: url(images/bregenz.jpg) 50% 0 fixed;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 100px 0;
-}
+
 #details {
-    background: 50% 0 fixed;
+    background: url('images/header.png') rgba(2, 41, 58,1) 50% 0 fixed;
     height: auto;
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
     position: relative;
     padding: 50px 0px 50px 0px;
+    color: #fff;
 }
+
 #love {
     background: 50% 0 fixed;
     height: auto;
@@ -81,12 +86,12 @@ a:hover {
     padding: 50px 0;
 }
 #contact {
-    background: rgba(2, 41, 58,1) 50% 0 fixed;
+    background: url('images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 50px 0;
+    padding: 50px 0px;
     color: #fff;
 }
 
