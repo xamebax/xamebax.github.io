@@ -14,6 +14,10 @@ body {
   font-size: 18px;
 }
 
+.row {
+  padding: 0px 50px;
+}
+
 h1 {
   font-size: 50px;
 }
@@ -31,17 +35,14 @@ a:hover {
   text-decoration: none;
 }
 
-.row {
-  padding: 0px 50px;
-}
-
-#did-do > a {
-  color: rgba(128, 130, 16, 1);
+a:visited {
+  color: rgba(74, 114, 132, 1);
   text-decoration: none;
 }
 
+
 #header {
-    background: url('images/header.png') rgba(2, 41, 58,1) 50% 0 fixed;
+    background: url('../images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
@@ -51,7 +52,7 @@ a:hover {
 }
 
 #background {
-    background: url(images/bregenz.jpg) 50% 0 fixed;
+    background: url('../images/bregenz.jpg') rgba(255, 255, 255, 1) no-repeat 50% 0 fixed;
     height: auto;
     margin: 0;
     width: 100%;
@@ -68,7 +69,7 @@ a:hover {
 }
 
 #details {
-    background: url('images/header.png') rgba(2, 41, 58,1) 50% 0 fixed;
+    background: url('../images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
     height: auto;
     margin: 0;
     width: 100%;
@@ -86,13 +87,17 @@ a:hover {
     padding: 50px 0;
 }
 #contact {
-    background: url('images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
+    background: url('../images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;
     position: relative;
     padding: 50px 0px;
     color: #fff;
+}
+
+#touch {
+  font-size: 36px;
 }
 
 /* Color palette as RGBa codes with the help of paletton.com */
