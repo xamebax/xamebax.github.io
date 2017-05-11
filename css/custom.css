@@ -123,3 +123,10 @@ a:visited {
 .rgba-secondary-2-2 { color: rgba(205,208,113,1) }
 .rgba-secondary-2-3 { color: rgba(128,130, 16,1) }
 .rgba-secondary-2-4 { color: rgba( 89, 92,  0,1) }
+
+
+/* LEAFLET.JS   */
+
+#main-map {
+  height: 400px;
+ }

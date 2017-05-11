@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Airport Water Map</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+        <link href="css/custom.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+  crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+  crossorigin=""></script>
+        <script src="js/jquery-1.6.1.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <section id="water-header" data-speed="6">
+                <header>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-3">
+                            <h1>Airport Water Map</h1>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <div class="row">
+                 <div id="main-map"></div>
+            </div>
+            <div class="row">
+  <p>
+&middot;--&middot; -&middot;-- --- - &middot;-&middot; &middot;&middot;&middot;&middot; --&middot;- -- &middot;- ----- &middot;&middot;&middot;&middot;- -&middot;- -&middot;&middot;&middot; -&middot;-&middot; &middot;&middot;- -- -&middot;-&middot; &middot;&middot;&middot;&middot;&middot; --&middot;&middot;&middot; &middot;&middot;- -&middot; -&middot; &middot;&middot;- &middot;-&middot;&middot; &middot;--&middot; &middot;&middot;&middot; --&middot;&middot; &middot;&middot;--- - -&middot;&middot; &middot;&middot;-&middot; &middot;-&middot;&middot; &middot;&middot; -&middot;- &middot;&middot; &middot;-&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;&middot;- &middot;- ----- &middot;&middot;--- &middot;-&middot; &middot;&middot; &middot;-&middot;&middot; &middot;---- &middot;&middot;&middot;-- &middot;--- &middot;&middot;&middot;-- &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot; &middot;-- -- &middot;--- &middot;&middot;&middot;- --&middot;&middot;&middot; &middot;&middot;&middot; -- &middot;&middot;&middot;&middot;&middot; ---&middot;&middot; &middot;&middot;--&middot;&middot;
+  </p>
+  <p>
+&middot;&middot;&middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; &middot; -&middot;- &middot;---- --&middot;&middot;-- &middot;- &middot;&middot;- &middot;- &middot;-&middot; &middot;-&middot;&middot; &middot;&middot;--- ----&middot; &middot; &middot;&middot;- -&middot;-&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot; ----- ---&middot;&middot; &middot;&middot; -&middot;- --&middot; -&middot;&middot;&middot; --&middot;&middot; --&middot;&middot;-- &middot;&middot; -- -&middot;&middot;&middot; -&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;&middot;- &middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; --&middot; &middot;- -&middot;-- &middot;-&middot;-&middot;- &middot;-&middot; &middot;--&middot; &middot;---- &middot;- -&middot;-
+</p><p>---&middot;&middot; &middot;-&middot;-&middot;- -- &middot;&middot;&middot; &middot; &middot;&middot;&middot;-- &middot;-&middot;-&middot;- --&middot; -&middot;-&middot; &middot;-&middot;&middot; &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot;&middot; --&middot; &middot;&middot; -&middot;&middot;&middot; -&middot;&middot;- -&middot;-- ---&middot;&middot; --&middot;&middot;-- &middot;&middot;--&middot;&middot; &middot;&middot;- -- -&middot;&middot;&middot; --&middot;&middot;-- &middot;&middot; --&middot; --- &middot; &middot;&middot;-&middot; ----&middot; &middot;--- -&middot;-- -&middot;- &middot; -- &middot;&middot;-&middot; &middot;&middot;&middot;-- &middot;&middot;--&middot;&middot; &middot;-- &middot;&middot;&middot; -- -&middot;-- &middot;-&middot;-&middot;- --&middot;&middot;-- &middot;--&middot; &middot;&middot;--- -- &middot;-- &middot;-- - -&middot;-- ----- &middot;-&middot;-&middot;- &middot;&middot; --&middot;&middot; ----- &middot;&middot;&middot; &middot;---- --&middot;&middot;-- -&middot; --- &middot;--&middot; &middot;&middot;--&middot;&middot; &middot; &middot;-&middot;
+  </p>
+  <p>
+&middot;-- -- &middot;--&middot; --&middot;&middot; --&middot;&middot;&middot; -&middot;- &middot;&middot;&middot;- &middot;-&middot;-&middot;- --&middot;&middot;-- &middot; -&middot; ----- &middot;&middot;&middot;&middot;&middot; -&middot;- -&middot;-&middot; &middot;&middot;&middot;&middot;- &middot;&middot;--&middot;&middot; - --&middot; --&middot;- ----- &middot;&middot;- -- -&middot;&middot; --&middot;&middot; ----- - &middot;&middot;- --- - &middot;&middot;&middot;&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; --&middot; --&middot;&middot; &middot;&middot;--&middot;&middot; &middot;&middot; &middot;-- &middot;&middot;&middot;&middot;- -&middot;&middot;&middot;&middot; -&middot; &middot;-&middot; -&middot;&middot; &middot;---- &middot;&middot;&middot;-- - &middot;-&middot; --&middot;&middot; &middot;&middot;--- &middot;&middot;--&middot;&middot; --
+  </p>
+  <p>
+&middot;-- &middot;&middot; &middot;--&middot; &middot;&middot;&middot;&middot;&middot; --- &middot;-&middot;&middot; -&middot;-- &middot; -&middot;-&middot; &middot;&middot;&middot;&middot; --&middot;&middot;&middot; -&middot; &middot;-&middot; - -&middot;-&middot; &middot;&middot;-&middot; &middot;&middot;&middot;- &middot;-- &middot;&middot; -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;-&middot; &middot;&middot;&middot; -&middot;&middot;&middot; -&middot;-&middot; --&middot;- - -&middot; -&middot;- &middot;&middot;&middot;&middot; &middot;&middot;&middot;&middot;- --&middot;&middot;-- -&middot;- &middot; -&middot;-&middot; -&middot;&middot;- -- -&middot;- -&middot;-&middot; &middot;-&middot;&middot; &middot;&middot;&middot;&middot;&middot;
+  </p>
+  <p>
+&middot;--&middot; -&middot;-- --- - &middot;-&middot; &middot;&middot;&middot;&middot; --&middot;- -- &middot;- ----- &middot;&middot;&middot;&middot;- -&middot;- -&middot;&middot;&middot; -&middot;-&middot; &middot;&middot;- -- -&middot;-&middot; &middot;&middot;&middot;&middot;&middot; --&middot;&middot;&middot; &middot;&middot;- -&middot; -&middot; &middot;&middot;- &middot;-&middot;&middot; &middot;--&middot; &middot;&middot;&middot; --&middot;&middot; &middot;&middot;--- - -&middot;&middot; &middot;&middot;-&middot; &middot;-&middot;&middot; &middot;&middot; -&middot;- &middot;&middot; &middot;-&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;&middot;- &middot;- ----- &middot;&middot;--- &middot;-&middot; &middot;&middot; &middot;-&middot;&middot; &middot;---- &middot;&middot;&middot;-- &middot;--- &middot;&middot;&middot;-- &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot; &middot;-- -- &middot;--- &middot;&middot;&middot;- --&middot;&middot;&middot; &middot;&middot;&middot; -- &middot;&middot;&middot;&middot;&middot; ---&middot;&middot; &middot;&middot;--&middot;&middot;
+  </p>
+  <p>
+&middot;&middot;&middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; &middot; -&middot;- &middot;---- --&middot;&middot;-- &middot;- &middot;&middot;- &middot;- &middot;-&middot; &middot;-&middot;&middot; &middot;&middot;--- ----&middot; &middot; &middot;&middot;- -&middot;-&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot; ----- ---&middot;&middot; &middot;&middot; -&middot;- --&middot; -&middot;&middot;&middot; --&middot;&middot; --&middot;&middot;-- &middot;&middot; -- -&middot;&middot;&middot; -&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;&middot;- &middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; --&middot; &middot;- -&middot;-- &middot;-&middot;-&middot;- &middot;-&middot; &middot;--&middot; &middot;---- &middot;- -&middot;-
+</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                <section id="water-contact" data-speed="1">                    
+                    <ul class="list-unstyled list-inline" id="touch">
+                        <li><a href="https://twitter.com/a_meba">twitter</a></li>
+                        <li><a href="https://github.com/xamebax">github</a></li>
+                        <li><a href="mailto:marta@paciorkowska.pl">email</a></li>
+                    </ul>
+</section>
+                </div>
+            </div>
+        </div>
+        <script>
+            var mymap = L.map('main-map').setView([52.2297, 21.0122], 6);
+            L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGFtZWJheCIsImEiOiJjajJrcXZ6bmIwMGlnMzJwaXBrMThybjdzIn0.gMaLZXMGlnd_PdRuBe_eaA', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                maxZoom: 10,
+                accessToken: 'pk.eyJ1IjoieGFtZWJheCIsImEiOiJjajJrcXZ6bmIwMGlnMzJwaXBrMThybjdzIn0.gMaLZXMGlnd_PdRuBe_eaA'
+            }).addTo(mymap);
+            var marker = L.marker([52.3854, 13.5216]).addTo(mymap);
+            marker.bindPopup("<b>SXL Berlin Scho&#776;nefeld</b><br>Water fountain: no<br>&frac12; l of water costs ~3&euro;");
+        </script>
+    </body>
+</html>
