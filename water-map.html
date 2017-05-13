@@ -57,8 +57,6 @@
                 maxZoom: 10,
                 accessToken: 'pk.eyJ1IjoieGFtZWJheCIsImEiOiJjajJrcXZ6bmIwMGlnMzJwaXBrMThybjdzIn0.gMaLZXMGlnd_PdRuBe_eaA'
             }).addTo(mymap);
-            var marker = L.marker([52.3854, 13.5216]).addTo(mymap);
-            marker.bindPopup("<b>SXL Berlin Scho&#776;nefeld</b><br>Water fountain: no<br>&frac12; l of water costs ~3&euro;");
 
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -66,9 +64,9 @@
                     airports = JSON.parse(this.responseText);
                     var count = Object.keys(airports).length;
                     for (var i = 0; i < Object.keys(airports).length; i++){
-                        if (airports[i].free_water == true || airports[i].free_water == false) {
+                        if (airports[i].free_water == "yes" || airports[i].free_water == "no") {
                             var marker = L.marker([airports[i].lat, airports[i].lng]).addTo(mymap);
-                            marker.bindPopup([airports[i].iata, airports[i].name].join(" "));
+                            marker.bindPopup(String.raw`${airports[i].iata} ${airports[i].name}<br>Water fountain: ${airports[i].free_water}<br>&frac12; l of water costs ${airports[i].cost_of_water}`);
                         }
                     }
                 }
