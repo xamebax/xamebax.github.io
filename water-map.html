@@ -66,7 +66,7 @@
                     for (var i = 0; i < Object.keys(airports).length; i++){
                         if (airports[i].free_water == "yes" || airports[i].free_water == "no") {
                             var marker = L.marker([airports[i].lat, airports[i].lng]).addTo(mymap);
-                            marker.bindPopup(String.raw`${airports[i].iata} ${airports[i].name}<br>Water fountain: ${airports[i].free_water}<br>&frac12; l of water costs ${airports[i].cost_of_water}`);
+                            marker.bindPopup(String.raw`${airports[i].iata} ${airports[i].name}<br>Water fountain: ${airports[i].free_water}<br>&frac12; l of water costs: ${airports[i].cost_of_water}<br>Water quality: ${airports[i].water_quality}<br>Comments: ${airports[i].comments}`);
                         }
                     }
                 }
