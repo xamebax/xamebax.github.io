@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>Airport Water Map</title>
+        <title>(European) Airport Water Map v0.1.0</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -21,7 +21,7 @@
                 <header>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-3">
-                            <h1>Airport Water Map</h1>
+                            <h1>Airport Water Map <small>v0.1.0</small></h1>
                         </div>
                     </div>
                 </header>
@@ -30,35 +30,23 @@
                  <div id="main-map"></div>
             </div>
             <div class="row">
-  <p>
-&middot;--&middot; -&middot;-- --- - &middot;-&middot; &middot;&middot;&middot;&middot; --&middot;- -- &middot;- ----- &middot;&middot;&middot;&middot;- -&middot;- -&middot;&middot;&middot; -&middot;-&middot; &middot;&middot;- -- -&middot;-&middot; &middot;&middot;&middot;&middot;&middot; --&middot;&middot;&middot; &middot;&middot;- -&middot; -&middot; &middot;&middot;- &middot;-&middot;&middot; &middot;--&middot; &middot;&middot;&middot; --&middot;&middot; &middot;&middot;--- - -&middot;&middot; &middot;&middot;-&middot; &middot;-&middot;&middot; &middot;&middot; -&middot;- &middot;&middot; &middot;-&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;&middot;- &middot;- ----- &middot;&middot;--- &middot;-&middot; &middot;&middot; &middot;-&middot;&middot; &middot;---- &middot;&middot;&middot;-- &middot;--- &middot;&middot;&middot;-- &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot; &middot;-- -- &middot;--- &middot;&middot;&middot;- --&middot;&middot;&middot; &middot;&middot;&middot; -- &middot;&middot;&middot;&middot;&middot; ---&middot;&middot; &middot;&middot;--&middot;&middot;
-  </p>
-  <p>
-&middot;&middot;&middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; &middot; -&middot;- &middot;---- --&middot;&middot;-- &middot;- &middot;&middot;- &middot;- &middot;-&middot; &middot;-&middot;&middot; &middot;&middot;--- ----&middot; &middot; &middot;&middot;- -&middot;-&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot; ----- ---&middot;&middot; &middot;&middot; -&middot;- --&middot; -&middot;&middot;&middot; --&middot;&middot; --&middot;&middot;-- &middot;&middot; -- -&middot;&middot;&middot; -&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;&middot;- &middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; --&middot; &middot;- -&middot;-- &middot;-&middot;-&middot;- &middot;-&middot; &middot;--&middot; &middot;---- &middot;- -&middot;-
-</p><p>---&middot;&middot; &middot;-&middot;-&middot;- -- &middot;&middot;&middot; &middot; &middot;&middot;&middot;-- &middot;-&middot;-&middot;- --&middot; -&middot;-&middot; &middot;-&middot;&middot; &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot;&middot; --&middot; &middot;&middot; -&middot;&middot;&middot; -&middot;&middot;- -&middot;-- ---&middot;&middot; --&middot;&middot;-- &middot;&middot;--&middot;&middot; &middot;&middot;- -- -&middot;&middot;&middot; --&middot;&middot;-- &middot;&middot; --&middot; --- &middot; &middot;&middot;-&middot; ----&middot; &middot;--- -&middot;-- -&middot;- &middot; -- &middot;&middot;-&middot; &middot;&middot;&middot;-- &middot;&middot;--&middot;&middot; &middot;-- &middot;&middot;&middot; -- -&middot;-- &middot;-&middot;-&middot;- --&middot;&middot;-- &middot;--&middot; &middot;&middot;--- -- &middot;-- &middot;-- - -&middot;-- ----- &middot;-&middot;-&middot;- &middot;&middot; --&middot;&middot; ----- &middot;&middot;&middot; &middot;---- --&middot;&middot;-- -&middot; --- &middot;--&middot; &middot;&middot;--&middot;&middot; &middot; &middot;-&middot;
-  </p>
-  <p>
-&middot;-- -- &middot;--&middot; --&middot;&middot; --&middot;&middot;&middot; -&middot;- &middot;&middot;&middot;- &middot;-&middot;-&middot;- --&middot;&middot;-- &middot; -&middot; ----- &middot;&middot;&middot;&middot;&middot; -&middot;- -&middot;-&middot; &middot;&middot;&middot;&middot;- &middot;&middot;--&middot;&middot; - --&middot; --&middot;- ----- &middot;&middot;- -- -&middot;&middot; --&middot;&middot; ----- - &middot;&middot;- --- - &middot;&middot;&middot;&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; --&middot; --&middot;&middot; &middot;&middot;--&middot;&middot; &middot;&middot; &middot;-- &middot;&middot;&middot;&middot;- -&middot;&middot;&middot;&middot; -&middot; &middot;-&middot; -&middot;&middot; &middot;---- &middot;&middot;&middot;-- - &middot;-&middot; --&middot;&middot; &middot;&middot;--- &middot;&middot;--&middot;&middot; --
-  </p>
-  <p>
-&middot;-- &middot;&middot; &middot;--&middot; &middot;&middot;&middot;&middot;&middot; --- &middot;-&middot;&middot; -&middot;-- &middot; -&middot;-&middot; &middot;&middot;&middot;&middot; --&middot;&middot;&middot; -&middot; &middot;-&middot; - -&middot;-&middot; &middot;&middot;-&middot; &middot;&middot;&middot;- &middot;-- &middot;&middot; -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;-&middot; &middot;&middot;&middot; -&middot;&middot;&middot; -&middot;-&middot; --&middot;- - -&middot; -&middot;- &middot;&middot;&middot;&middot; &middot;&middot;&middot;&middot;- --&middot;&middot;-- -&middot;- &middot; -&middot;-&middot; -&middot;&middot;- -- -&middot;- -&middot;-&middot; &middot;-&middot;&middot; &middot;&middot;&middot;&middot;&middot;
-  </p>
-  <p>
-&middot;--&middot; -&middot;-- --- - &middot;-&middot; &middot;&middot;&middot;&middot; --&middot;- -- &middot;- ----- &middot;&middot;&middot;&middot;- -&middot;- -&middot;&middot;&middot; -&middot;-&middot; &middot;&middot;- -- -&middot;-&middot; &middot;&middot;&middot;&middot;&middot; --&middot;&middot;&middot; &middot;&middot;- -&middot; -&middot; &middot;&middot;- &middot;-&middot;&middot; &middot;--&middot; &middot;&middot;&middot; --&middot;&middot; &middot;&middot;--- - -&middot;&middot; &middot;&middot;-&middot; &middot;-&middot;&middot; &middot;&middot; -&middot;- &middot;&middot; &middot;-&middot; &middot;&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;-&middot;-&middot;- &middot;&middot;- &middot;- ----- &middot;&middot;--- &middot;-&middot; &middot;&middot; &middot;-&middot;&middot; &middot;---- &middot;&middot;&middot;-- &middot;--- &middot;&middot;&middot;-- &middot;&middot;&middot;&middot;&middot; &middot;-&middot; &middot; &middot;-- -- &middot;--- &middot;&middot;&middot;- --&middot;&middot;&middot; &middot;&middot;&middot; -- &middot;&middot;&middot;&middot;&middot; ---&middot;&middot; &middot;&middot;--&middot;&middot;
-  </p>
-  <p>
-&middot;&middot;&middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; &middot; -&middot;- &middot;---- --&middot;&middot;-- &middot;- &middot;&middot;- &middot;- &middot;-&middot; &middot;-&middot;&middot; &middot;&middot;--- ----&middot; &middot; &middot;&middot;- -&middot;-&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot; ----- ---&middot;&middot; &middot;&middot; -&middot;- --&middot; -&middot;&middot;&middot; --&middot;&middot; --&middot;&middot;-- &middot;&middot; -- -&middot;&middot;&middot; -&middot;&middot;- -&middot;&middot;&middot;&middot; &middot;&middot;- &middot;&middot; &middot;&middot;&middot;- &middot;&middot;&middot;&middot;&middot; --&middot; &middot;- -&middot;-- &middot;-&middot;-&middot;- &middot;-&middot; &middot;--&middot; &middot;---- &middot;- -&middot;-
-</p>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <section id="water-contact" data-speed="1">
-                        <ul class="list-unstyled list-inline" id="touch">
-                            <li><a href="https://twitter.com/a_meba">twitter</a></li>
-                            <li><a href="https://github.com/xamebax">github</a></li>
-                            <li><a href="mailto:marta@paciorkowska.pl">email</a></li>
+                <div class="col-md-8 col-md-offset-3">
+                    <p>
+                        This is an early version of a map that is supposed to serve as a compilation of data on clean water accessibility at airports.
+                        The goal is to provide information on the following:
+                        <ul class="list-unstyled">
+                            <li>is there a water fountain?</li>
+                            <li>how much does bottled water cost?</li>
+                            <li>is tapwater safe to drink and accessible?</li>
                         </ul>
-                    </section>
+                    </p>
+                    <p>
+                        Don't see the airport you are looking for? It means this website has no data; only airports with data on water are shown.
+                    </p>
+                    <p>
+                        If you would like to contribute with data on water, have a look at <a href="https://github.com/xamebax/airport-water-map-processing-files/blob/master/european-airports.json">this file with a list of European airports</a>.
+                        You can then open a pull request on Github, <a href="https://twitter.com/a_meba">tweet at me</a>, or <a href="mailto:marta@paciorkowska.pl">shoot me an email</a>.
+                    </p>
                 </div>
             </div>
         </div>
