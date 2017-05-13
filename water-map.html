@@ -37,7 +37,7 @@
                         <ul class="list-unstyled">
                             <li>is there a water fountain?</li>
                             <li>how much does bottled water cost?</li>
-                            <li>is tapwater safe to drink and accessible?</li>
+                            <li>is tap water safe to drink and accessible?</li>
                         </ul>
                     </p>
                     <p>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <script>
-            var mymap = L.map('main-map').setView([52.2297, 21.0122], 5);
+            var mymap = L.map('main-map').setView([52.2297, 21.0122], 4);
             L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGFtZWJheCIsImEiOiJjajJrcXZ6bmIwMGlnMzJwaXBrMThybjdzIn0.gMaLZXMGlnd_PdRuBe_eaA', {
                 attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
                 maxZoom: 10,
@@ -66,8 +66,10 @@
                     airports = JSON.parse(this.responseText);
                     var count = Object.keys(airports).length;
                     for (var i = 0; i < Object.keys(airports).length; i++){
-                        var marker = L.marker([airports[i].lat, airports[i].lng]).addTo(mymap);
-                        marker.bindPopup([airports[i].iata, airports[i].name].join(" "));
+                        if (airports[i].free_water == true || airports[i].free_water == false) {
+                            var marker = L.marker([airports[i].lat, airports[i].lng]).addTo(mymap);
+                            marker.bindPopup([airports[i].iata, airports[i].name].join(" "));
+                        }
                     }
                 }
             };
