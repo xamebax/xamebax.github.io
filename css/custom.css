@@ -104,6 +104,10 @@ a:visited {
   font-size: 12px;
 }
 
+.lead {
+  margin: 22px;
+}
+
 /* Color palette as RGBa codes with the help of paletton.com */
 
 .rgba-primary-0 { color: rgba( 39, 87,107,1) }	/* Main Primary color */
