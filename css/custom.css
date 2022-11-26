@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'bodonitownregular';
+    font-family: 'atkinsonhyperlegible';
     src: url('../fonts/Bodonitown-webfont.eot');
-    src: url('../fonts/Bodonitown-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Bodonitown-webfont.woff') format('woff'),
-         url('../fonts/Bodonitown-webfont.ttf') format('truetype'),
-         url('../fonts/Bodonitown-webfont.svg#bodonitownregular') format('svg');
+    src: url('../fonts/Atkinson-Hyperlegible-Regular-102.eot') format('embedded-opentype'),
+         url('../fonts/AtkinsonHyperlegible-Regular-102.woff') format('woff'),
+         url('../fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype'),
+         url('../fonts/Atkinson-Hyperlegible-Regular-102.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-  font-family: 'bodonitownregular', serif;
+  font-family: 'atkinsonhyperlegible', serif;
   font-size: 18px;
 }
 
