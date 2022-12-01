@@ -46,11 +46,13 @@ a:visited {
     height: auto;
     margin: 0 auto;
     width: 100%;
+    max-width: 2239px;
     position: relative;
     padding: 50px 0px;
     color: #fff;
 }
 
+/* max width of image can be 2239px; the header shouldn't be bigger than that */
 #background {
     background: url('../images/bregenz.jpg') rgba(255, 255, 255, 1) no-repeat 50% 0 fixed;
     height: auto;
@@ -92,6 +94,7 @@ a:visited {
     height: auto;
     margin: 0 auto;
     width: 100%;
+    max-width: 2239px;
     position: relative;
     padding: 50px 0px;
     color: #fff;
