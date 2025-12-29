@@ -1,0 +1,31 @@
+{
+  "cSpell.words": [
+    "Acrolinx",
+    "darmo",
+    "freeganism",
+    "Fundacja",
+    "Kobiet",
+    "Linktr",
+    "Lionbridge",
+    "magazyn",
+    "Miejska",
+    "Ogrodnicza",
+    "Paciorkowska",
+    "Partyzantka",
+    "Poznań",
+    "stylesheet",
+    "suboktav",
+    "Życie"
+  ],
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none",
+    "reportShadowedImports": "none"
+  },
+  "python.analysis.extraPaths": [
+    "",
+    "/Users/martapaciorkowska/.vscode/extensions/joedevivo.vscode-circuitpython-0.2.0-darwin-arm64/stubs",
+    "/Users/martapaciorkowska/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20251202/adafruit-circuitpython-bundle-py-20251202/lib"
+  ],
+  "circuitpython.board.version": null
+}
