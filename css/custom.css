@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'atkinsonhyperlegible';
-    src: url('../fonts/Bodonitown-webfont.eot');
     src: url('../fonts/Atkinson-Hyperlegible-Regular-102.eot') format('embedded-opentype'),
          url('../fonts/AtkinsonHyperlegible-Regular-102.woff') format('woff'),
          url('../fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype'),
@@ -134,7 +133,3 @@ a:visited {
 
 
 /* LEAFLET.JS   */
-
-#main-map {
-  height: 500px;
- }
