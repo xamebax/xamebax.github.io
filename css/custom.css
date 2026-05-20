@@ -34,11 +34,10 @@ a:hover {
   text-decoration: none;
 }
 
-a:visited {
-  color: rgba(74, 114, 132, 1);
-  text-decoration: none;
+.btn-secondary {
+  background-color: rgba(2, 41, 58, 1);
+  border-color: rgba(2, 41, 58, 1);
 }
-
 
 #header {
     background: url('../images/header.png') rgba(2, 41, 58, 1) 50% 0 fixed;
